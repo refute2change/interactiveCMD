@@ -53,9 +53,9 @@ function checkvalidity(event)
 {
     document.getElementById("answer").value = document.getElementById("answer").value.toUpperCase(); // To change the display string
     var x = document.getElementById("answer").value;
-    if (x.length >= 256)
+    if (x.length >= 10)
     {
-        document.getElementById("answer").value = x.substring(0, 256); // Limit input to 10 characters
+        document.getElementById("answer").value = x.substring(0, 10); // Limit input to 10 characters
         console.log("Input limited to 256 characters.");
     }
     event.preventDefault();

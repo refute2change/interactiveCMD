@@ -62,6 +62,7 @@ input[type=text]
 
 #conversation
 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
