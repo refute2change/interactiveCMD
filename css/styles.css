@@ -77,6 +77,7 @@ input[type=text]
     margin-left: auto;
     background: #73AD21;
     width: fit-content;
+    max-width: 80%;
     height: fit-content;
     padding: 10px;
     color: #0000ff;
@@ -89,6 +90,7 @@ input[type=text]
     margin-right: auto;
     background: #aaaaaa;
     width: fit-content;
+    max-width: 80%;
     height: fit-content;
     padding: 10px;
     color: #000000;
