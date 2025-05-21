@@ -66,7 +66,7 @@ input[type=text]
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 85%; /* move the object by 50% its width to the left*/
+    width: 87%; /* move the object by 50% its width to the left*/
     max-height: 80vh;
     overflow-y: auto;
 }

@@ -10,5 +10,6 @@
     "YEAH": "YEAH-NOPE",
     "NAH": "NAH-NOPE",
     "YAY": "YAY-NAY",
-    "NAY": "NAY-YAY"}
+    "NAY": "NAY-YAY",
+    "": "What?"}
 }

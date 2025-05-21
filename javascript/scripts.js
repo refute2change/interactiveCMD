@@ -18,7 +18,8 @@ const responses = {"responses": {
     "YEAH": "YEAH-NOPE",
     "NAH": "NAH-NOPE",
     "YAY": "YAY-NAY",
-    "NAY": "NAY-YAY"}
+    "NAY": "NAY-YAY",
+    "": "What?"}
 };
 
 function lmao()
@@ -40,6 +41,8 @@ function pickupinput(event)
     addinputevent(x);
     // response node
     addresponseevent(x);
+    const conversation = document.getElementById("conversation");
+    conversation.scrollTop = conversation.scrollHeight;
     event.preventDefault();
 }
 
@@ -58,8 +61,17 @@ function addresponseevent(x)
     const element = document.getElementById("conversation");
     const response = document.createElement("div"); // Create a new div element, will be used later on for actual multi-line response
     const respara = document.createElement("p"); // Create a new paragraph element
-    console.log(responses);
-    const resnode = document.createTextNode(`You typed: ${x}. Sadly whoever owns this has not guided me what to do, so I can't give you any explicit commands. Ask the author, bet he has everything under control.`); // Create a text node with the input value
+    let resstring = ""; // Initialize the response string
+    if (responses["responses"].hasOwnProperty(x)) {
+        resstring = responses["responses"][x]; // Get the response string from the object
+        console.log(responses["responses"][x]);
+    }
+    else
+    {
+        resstring = responses["responses"][""];
+    }
+    console.log(resstring);
+    const resnode = document.createTextNode(resstring); // Create a text node with the input value
     respara.classList.add("ourResponse"); // Set the class name for styling
     respara.appendChild(resnode); // Append the text node to the paragraph element
     element.appendChild(respara); // Append the paragraph element to the "conversation" element
